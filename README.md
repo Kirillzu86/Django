@@ -7,3 +7,6 @@
 Admin:
   1. login: Admin
   2. password: 290109kz
+
+Запустить сервер:
+  1. https://render.com/docs/deploy-django
