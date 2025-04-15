@@ -3,3 +3,6 @@
   2. Django\venv\Scripts\Activate.ps1
   3. pip install django Pillow
   4. python manage.py runserver
+Admin:
+  1. login: Admin
+  2. password: 290109kz
