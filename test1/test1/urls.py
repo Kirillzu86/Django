@@ -20,8 +20,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', views.popular_list, name='popular_list'),
-    path('<slug:slug>/', views.product_detail, name='product_detail'),
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
+    path('', views.popular_list, name='popular_list'),
+    path('<slug:slug>/', views.product_detail, name='product_detail'),
 ]

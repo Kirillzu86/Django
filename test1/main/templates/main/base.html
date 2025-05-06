@@ -1,33 +1,39 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'bootstrap\css\bootstrap.min.css' %}">
-    <link rel="stylesheet" href="css/base.css">
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-    <header class="header sticky-top">
-        <div class="header-container d-flex">
-            <navbar class="header-nav">
-                <ul class="header-list d-flex">
-                    <li class="nav-a m-3"><a href="{% url 'index' %}">Home</a></li>
-                    <li class="nav-a m-3"><a href="{% url 'about' %}">Shop</a></li>
-                </ul>
-            </navbar>
-            <div class="header-logo">
-                <a href=""><img src="{% static 'img\logo.png' %}" alt="Logo" class="logo"></a>
-            </div>
-            <div class="header-profile">
-                <a href="#" class="m-3">Login</a>
-            </div>
-    </header>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
+<header class="header sticky-top">
+    <div class="hearder-conteiner d-flex">
+        <nav class="header-nav">
+            <ul class="header-list d-flex">
+                <li><a href="" class="nav-a m-3">Home</a></li>
+                <li><a href="" class="nav-a m-3">Shop</a></li>
+            </ul>
+        </nav>
+        <div class="headr-logo">
+            <a href="#">
+                <img src="{% static 'img/logo.png' %}" alt="Logo" width="30px" class="SecondSkin-logo">
+            </a>
+        </div>
+        <div class="header-profile">
+            <a href="#" class="m-3">LOGIN</a>
+        </div>
     </div>
-    <script scr="{% static 'bootstrap\js\bootstrap.bundle.min.js' %}"></script>
+</header>
+
+<div class="container">
+    {% block content %}
+    {% endblock content %}
+</div>
+
+<script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
