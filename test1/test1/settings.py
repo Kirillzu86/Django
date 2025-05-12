@@ -140,3 +140,8 @@ DATABASES = {
         'PORT': '5432',  # стандартный порт PostgreSQL
     }
 }
+# Media files (user-uploaded files)
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

@@ -12,7 +12,8 @@ def popular_list(request):
                   {'products': product})
 
 def product_detail(request, slug):
-    product = get_object_or_404(Product, slug=slug, available=True)
+    from main.models import Product 
+    product = Product.objects.get(id=3)
     return render(request,
                   'main/product/detail.html',
                   {'product': product})
