@@ -133,10 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'test',
+        'NAME': 'DB_Django',
         'USER': 'postgres',
         'PASSWORD': '1234',
-        'HOST': 'localhost',  # или IP адрес сервера
+        'HOST': 'pg-server',  # или IP адрес сервера
         'PORT': '5432',  # стандартный порт PostgreSQL
     }
 }
