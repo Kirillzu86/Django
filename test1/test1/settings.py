@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-kyt&!nz^rtg$9oljndi8*7o^oqzarf$+zc-$=zwv@%g&20nch&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['178.20.178.140', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 
@@ -145,3 +145,6 @@ import os
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CSRF_TRUSTED_ORIGINS = ['https://*.ngrok-free.app']
+

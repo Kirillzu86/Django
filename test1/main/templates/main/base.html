@@ -7,20 +7,20 @@
 <title>Document</title>
 
 <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}?v=2">
 </head>
-<body>
+<body data-bs-theme="dark">
 <header class="header sticky-top">
     <div class="hearder-container d-flex">
         <nav class="header-nav">
             <ul class="header-list d-flex">
-                <li><a href="" class="nav-a m-3">Home</a></li>
+                <li><a href="{% url 'main:index' %}" class="nav-a m-3">Home</a></li>
                 <li><a href="" class="nav-a m-3">Shop</a></li>
             </ul>
         </nav>
         <div class="headr-logo">
             <a href="#">
-                <img src="{% static 'img/logo.png' %}" alt="Logo" width="30px" class="SecondSkin-logo">
+                <img src="{% static 'images/logo.png' %}" alt="Logo" width="30px" class="SecondSkin-logo">
             </a>
         </div>
         <div class="header-profile">
@@ -30,10 +30,67 @@
 </header>
 
 <div class="container">
+    <!-- Поиск и фильтры -->
+    <form class="search-bar" method="get" action="">
+        <input type="text" class="search-input" name="q" placeholder="Поиск товаров...">
+        <button type="submit" class="search-btn">Найти</button>
+    </form>
+    <div class="filter-bar">
+        <button class="filter-btn active" type="button">Все</button>
+        <button class="filter-btn" type="button">Новинки</button>
+        <button class="filter-btn" type="button">Скидки</button>
+        <button class="filter-btn" type="button">Популярное</button>
+    </div>
     {% block content %}
     {% endblock content %}
+
+    <!-- Отзывы -->
+    <section class="review-section mt-5">
+        <div class="review-title">Отзывы покупателей</div>
+        <div class="review-list">
+            <div class="review-item">
+                <span class="review-author">Иван:</span>
+                <div class="review-text">Отличный магазин, быстрая доставка!</div>
+            </div>
+            <div class="review-item">
+                <span class="review-author">Мария:</span>
+                <div class="review-text">Качественный товар, рекомендую!</div>
+            </div>
+        </div>
+        <form>
+            <input type="text" placeholder="Ваше имя" style="padding:6px 10px; border-radius:6px; border:1px solid #ddd; margin-right:8px;">
+            <input type="text" placeholder="Ваш отзыв" style="padding:6px 10px; border-radius:6px; border:1px solid #ddd; width:200px;">
+            <button type="submit" class="search-btn" style="margin-left:8px;">Оставить</button>
+        </form>
+    </section>
 </div>
 
+<!-- Футер -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <div class="footer-title">О магазине</div>
+            <div>Лучшие товары для вас. Быстрая доставка и качественный сервис.</div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-title">Навигация</div>
+            <div class="footer-links">
+                <a href="#">Главная</a>
+                <a href="#">Каталог</a>
+                <a href="#">Контакты</a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <div class="footer-title">Контакты</div>
+            <div>Тел: +7 900 000-00-00<br>Email: info@shop.ru</div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Магазин. Все права защищены.
+    </div>
+</footer>
+
 <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'js/base.js' %}"></script>
 </body>
 </html>

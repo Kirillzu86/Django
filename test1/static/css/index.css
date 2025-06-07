@@ -21,4 +21,269 @@ a{
 
 h1{
     font-size: 48px;
-} */
+} 
+
+.home-title {
+    text-align: center;
+    margin-bottom: 32px;
+}
+.home-btn {
+    background: #e63946;
+    color: #fff;
+    padding: 12px 32px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px rgba(230,57,70,0.08);
+    transition: background 0.2s;
+    display: inline-block;
+}
+.home-btn:hover {
+    background: #d90429;
+}
+
+.rec-title h3 {
+    color: #222;
+    font-weight: 700;
+    border-left: 4px solid #e63946;
+    padding-left: 12px;
+}
+
+.home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.home-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 24px 18px 18px 18px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s, transform 0.2s;
+    position: relative;
+    text-align: center;
+}
+.home-card:hover {
+    box-shadow: 0 8px 32px rgba(230,57,70,0.13);
+    transform: translateY(-4px) scale(1.03);
+}
+.home-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+.title-card {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.cart-discount {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+.cart-discount .line {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 16px;
+}
+.cart-discount p:last-child {
+    color: #e63946;
+    font-size: 18px;
+    font-weight: 700;
+}
+.price {
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.card-btn {
+    margin-top: auto;
+    background: #e63946;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(230,57,70,0.08);
+    display: inline-block;
+}
+.card-btn:hover {
+    background: #d90429;
+}
+
+/* Поиск и фильтры */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 24px 0;
+}
+.search-input {
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px 0 0 6px;
+    font-size: 16px;
+    outline: none;
+    width: 260px;
+    transition: border 0.2s;
+}
+.search-input:focus {
+    border-color: #e63946;
+}
+.search-btn {
+    background: #e63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.search-btn:hover {
+    background: #d90429;
+}
+.filter-bar {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.filter-btn {
+    background: #fff;
+    border: 1px solid #e63946;
+    color: #e63946;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.filter-btn.active,
+.filter-btn:hover {
+    background: #e63946;
+    color: #fff;
+}
+
+/* Отзывы */
+.review-section {
+    margin-top: 40px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 24px;
+}
+.review-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #e63946;
+}
+.review-list {
+    margin-bottom: 18px;
+}
+.review-item {
+    border-bottom: 1px solid #eee;
+    padding: 12px 0;
+}
+.review-item:last-child {
+    border-bottom: none;
+}
+.review-author {
+    font-weight: 600;
+    color: #222;
+}
+.review-text {
+    color: #444;
+    margin-top: 4px;
+}
+
+/* Футер */
+.footer {
+    background: #222;
+    color: #fff;
+    padding: 32px 0 16px 0;
+    margin-top: 48px;
+}
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.footer-col {
+    flex: 1 1 180px;
+    min-width: 180px;
+}
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.footer-links a {
+    display: block;
+    color: #fff;
+    margin-bottom: 8px;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+.footer-links a:hover {
+    color: #e63946;
+}
+.footer-bottom {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+    .home-cards {
+        gap: 18px;
+    }
+    .home-card {
+        width: 45vw;
+        min-width: 180px;
+        max-width: 320px;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}
+@media (max-width: 600px) {
+    .home-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-card {
+        width: 90vw;
+    }
+    .footer-col {
+        min-width: 120px;
+    }
+    .review-section {
+        padding: 12px;
+    }
+}

@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-<p>{{ product.image.url }}</p>
 <section class="home d-flex flex-column">
     <div class="home-title">
         <a href="#" class="home-btn mt-4">ALL PRODUCT</a>
@@ -15,7 +14,7 @@
     <div class="home-cards d-flex gap-4">
         {% for product in products %}
             <a href="{{ product.get_absolute_url }}" class="home-card">
-                <img src="{% if media.product.image %}{{ media.product.image.url }}{% else %}{% static 'images/no-image.png' %}{% endif %}" alt="">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/no-image.png' %}{% endif %}" alt="{{ product.name }}">
 
                 <h5 class="title-card">{{ product.name }}</h5>
 
@@ -28,7 +27,7 @@
                     <p class="price">{{ product.price }}</p>
                 {% endif %}
 
-                <a href="#" class="card-btn">Add to cart</a>
+                <span class="card-btn">Add to cart</span>
             </a>
         {% endfor %}
     </div>

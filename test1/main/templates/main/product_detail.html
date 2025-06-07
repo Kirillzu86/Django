@@ -1,0 +1,7 @@
+{% comment %} <!-- filepath: c:\Users\ЗуевК\Desktop\Django\test1\main\templates\main\product_detail.html -->
+{% extends 'main/base.html' %}
+{% block content %}
+<h1>{{ product.name }}</h1>
+<p>{{ product.description }}</p>
+<img src="{{ product.image.url }}" alt="{{ product.name }}">
+{% endblock %} {% endcomment %}
